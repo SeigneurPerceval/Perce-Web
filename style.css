@@ -6,35 +6,45 @@
     list-style: none;
 }
 
-/*.index{
+/*.index
 height: 100vh;
 width: 100%;
 background-image: url(image/Montagne.webp);
 background-size: cover;
 }*/
 
-.equipe {
-    height: 100vh;
-    width: 100%;
-    background-image: url(image/enconstruction.png);
+#bodyLOL{
+    background-image: url(image/rift.jpg);
     background-size: cover;
-    }
+}
 
+#bodystast{
+    background-image: url(image/LDC2.jpg);
+    background-size: cover;
+}
 
+#bodyINDEX{
+    background-image: url(image/medieval.webp);
+    background-size: cover;
+    
+}
 .navbar{
-position: absolute;
-padding: 50px;
-display: flex;
-align-items: center;
-justify-content: space-around;
-width: 100%;
-box-sizing: border-box;
-background: 0;
+    position: absolute;
+    padding-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box;
+    background: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.navbar a {
-color:rgb(139, 23, 23);
 
-}
 .navbar .logo{
 font-size: 1em;
 font-weight: bold;
@@ -49,8 +59,11 @@ width: 25%;
 }
 
 .navbar .nav-links ul li.active a{
-    color: red;
-    font-weight: 600;
+    color: rgb(214, 214, 214);
+    font-weight: bold;
+    background-color: rgb(33, 33, 33);
+    padding:5px;
+    border-radius: 10px;
 }
 .navbar .menu-hamburger {
     position: absolute;
@@ -68,11 +81,7 @@ width: 25%;
         z-index: -1;
         filter: brightness(30%);
         }
-h1 {
-        position: absolute;
-        justify-content: center;
-        font-weight: bold;
-    }
+
 section {
 
     min-height: 100vh;
@@ -80,20 +89,25 @@ section {
     font-weight: bold;
 }
 .home {
-
-display: flex;
-align-items: center;
-padding: 0 9%;
-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    color: white;
+    
 }
 .home-content {
-    max-width: 80rem;
+    padding:15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    
+    
 }
 
 .home-content h1{
     font-size: 5.6rem;
     font-weight: 700;
-    line-height: 0;
+    margin: 0rem 0rem 3rem 5rem;
+    
 }
 .home-content .text-animated{
     position: relative;
@@ -106,15 +120,17 @@ color: white;
     -webkit-text-stroke: .7px var(red);
 }
 .home-content p{
-
     font-size: 1.6rem;
-    margin: 1rem 0 4rem;
+    margin: 2rem 0 2rem;
+}
+ 
+.outils{
+    margin-left:60px;
 }
 
-
-    
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px){ 
     .navbar{
+        user-select: none;
         padding: 0;
     }
     .nav-links{
@@ -152,4 +168,219 @@ color: white;
         margin-left: 0;
     }
 }
+
+.container{
+    display: flex;
+    position:absolute;
+    top: 25vh;
+    margin-left: 50vh;
+    color:white;
+    font-size: 1.5em;
+    padding:10px;
+}
+
+.tab{
+    display: flex;
+    position:absolute;
+    width: 100%;
+    top: 25vh;
+    font-size: 1.5em;
+    padding:10px;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    
+}
+input, select{
+    color:white;
+    font-size: 0.8em;
+    background-color: rgb(30, 29, 29);
+}
+/* Dans le cas ou y'a une erreur dans l'input */
+input.error{
+    border: 2px dashed red;
+}
+/* Dans le cas ou y'a une erreur dans le select */
+select.error{
+    border: 1px dashed red;
+}
+
+
+.box{
+    display:flex;
+    margin: 5px 0;
+}
+.box label{
+    margin-right: 13px;
+}
+
+.form-control input{
+    margin-right: 7px;
+}
+
+.switch-container {
+    display: inline-block;
+    position: relative;
+}
+
+.balance-switch {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.switch-div{
+    font-size: 0.8em;
+}
+.switch-label {
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 34px;
+}
+
+.switch-label:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    
+    background-color: white;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+.balance-switch:checked + .switch-label {
+    background-color: #024705;
+}
+
+.balance-switch:checked + .switch-label:before {
+    transform: translateX(20px);
+}
+
+#switch-status {
+    margin-left: 70px;
+    font-weight: bold;
+}
+
+.liste-joueurs{
+    padding:10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.equipes{
+    margin-left: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: white;
+    height: fit-content;
+}
+
+.postes{
+    margin-left: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    height: fit-content;
+}
+
+
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    color: white;
+    border-bottom: 1px solid rgb(119, 119, 119);
+    
+}
+.equipe1{
+    border-right: 1px solid rgb(119, 119, 119);
+}
+
+.equipe1-joueurs, .equipe2-joueurs{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+}
+
+.liste-postes{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: space-between;
+}
+.liste-postes label {
+    margin-left: 5px;
+}
+
+textarea {
+    color: white;
+    height: 30px;
+    width: 100%;
+    resize: none; 
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(35, 35, 35);
+
+}
+
+.btn-generate{
+
+    padding: 10px;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.btn-reset{
+    padding: 10px;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.btn-swap{
+    padding: 10px;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    border-radius: 15px;
+    margin-top: 8px;
+}
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px auto;
+  }
+  th, td {
+    border: 1px solid #333;
+    padding: 8px 12px;
+    text-align: center;
+    background-color: #f2f2f2;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 
